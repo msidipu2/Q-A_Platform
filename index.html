@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCQ Exam</title>
+    <link href="./output.css" rel="stylesheet">
+</head>
+<body class="bg-bg-gradient-to-r from-pink-500 to-rose-800">
+    <div class="container">
+
+        <div class="grid gap-4 m-4">
+            <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-red-900">Get back to growth with <span class="text-blue-600 dark:text-blue-800">the world's #1</span> Online Exam</h1>
+            <p class="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">Embark on your journey to success with the world's #1 Online Exam platform, designed to accelerate your growth and achievement. </p> 
+            <p class="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-700">Join thousands of learners who have transformed their futures with our intuitive and effective testing solution.</p>
+        </div>
+
+        <div class="grid gap-4 m-4">
+            <div class="w-72 text-center">
+                <div class="relative w-full min-w-[200px] h-10">
+                <input
+                    id="numQuestions"
+                    class="peer w-full h-full bg-transparent text-blue-gray-700 font-sans font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 border focus:border-2 border-t-transparent focus:border-t-transparent text-sm px-3 py-2.5 rounded-[7px] border-blue-gray-200 focus:border-gray-900"
+                    placeholder=" " />
+                <label
+                    for="numQuestions"
+                    class="flex w-full h-full select-none pointer-events-none absolute left-0 font-extrabold !overflow-visible truncate peer-placeholder-shown:text-blue-gray-500 leading-tight peer-focus:leading-tight peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500 transition-all -top-1.5 peer-placeholder-shown:text-sm text-[11px] peer-focus:text-[11px] before:content[' '] before:block before:box-border before:w-2.5 before:h-1.5 before:mt-[6.5px] before:mr-1 peer-placeholder-shown:before:border-transparent before:rounded-tl-md before:border-t peer-focus:before:border-t-2 before:border-l peer-focus:before:border-l-2 before:pointer-events-none before:transition-all peer-disabled:before:border-transparent after:content[' '] after:block after:flex-grow after:box-border after:w-2.5 after:h-1.5 after:mt-[6.5px] after:ml-1 peer-placeholder-shown:after:border-transparent after:rounded-tr-md after:border-t peer-focus:after:border-t-2 after:border-r peer-focus:after:border-r-2 after:pointer-events-none after:transition-all peer-disabled:after:border-transparent peer-placeholder-shown:leading-[3.75] text-gray-500 peer-focus:text-gray-900 before:border-blue-gray-200 peer-focus:before:!border-gray-900 after:border-blue-gray-200 peer-focus:after:!border-gray-900">
+                    Number of Questions:
+                </label>
+                </div>
+            
+          
+            
+
+            <input type="number" id="numQuestions" min="1" max="10">
+            
+            <br>
+            <button onclick="generateQuestions()" type="button" class="text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Start Exam</button>
+        </div>
+        <br>
+        <div id="timer">Time Left: <span id="time">0</span> seconds</div>
+
+        <form id="examForm" onsubmit="submitExam(event) ">
+            <div id="questions"></div>
+            <button type="submit" class="text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Submit Exam</button>
+        </form>
+
+        <div id="results"></div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
